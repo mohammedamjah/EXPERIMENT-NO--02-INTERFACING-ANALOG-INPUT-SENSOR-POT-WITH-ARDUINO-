@@ -1,8 +1,8 @@
- ###  DATE: 
+ ###  DATE: 4/3/2024
 
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
+###  NAME: bestha naresh 
+###  ROLL NO :212221080012
+###  DEPARTMENT: mechanical engineering
 
 **AIM**:  To interface a Analog  input (angular displacement sensor POT) and scale the values up on change in the input.
 
@@ -68,7 +68,29 @@ CIRCUIT DIAGRAM
 
 
 **PROGRAM** 
- 
+ developed by :
+rollnumber : ![Screenshot 2024-02-22 214116](https://github.com/vasanthkumarch/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/160887872/22718423-5759-47dd-9d59-ed7a1bbd01db)
+
+
+int potPin = A5;
+int ledPin = 2;
+void setup()
+{
+ pinMode(potPin,INPUT);
+ pinMode(ledPin, OUTPUT);
+ Serial.begin(9600);
+}
+
+void loop()
+{
+ int PotMeasure = analogRead(A5);
+ if(PotMeasure>=450)
+ {
+ digitalWrite(2, HIGH);
+ }
+ else
+ digitalWrite(2, LOW);
+}
 
 
 
